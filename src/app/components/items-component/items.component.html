@@ -1,0 +1,6 @@
+<div class="itemsPart">
+    <h2>Items</h2>
+	<item-creator (create)="onCreateItem($event)"></item-creator>
+	<item *ngFor="let item of items" [item]="item" [selectedId]="selectedItemId" (select)="onItemSelect($event)" (delete)="onItemDelete($event)" >
+	</item>
+</div>

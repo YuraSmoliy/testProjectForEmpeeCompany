@@ -1,0 +1,22 @@
+.add{
+	display:flex;
+}
+
+.creator{
+	width:288px;
+	height:37px;
+	border-radius:5px;
+	font-size:16pt;
+	font-family:OpenSans;
+}
+
+.creatorButton{
+	width:128px;
+	height:40px;
+	border-radius:3px;
+	margin-left:9px;
+	font-size:16pt;
+	font-family:OpenSans Semibold;
+	background-color:#27CCC0;
+	color :white;
+}

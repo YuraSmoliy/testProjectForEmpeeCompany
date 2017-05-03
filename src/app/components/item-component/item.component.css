@@ -1,0 +1,43 @@
+.conteiner{
+	display:flex;
+	margin-top:20px;
+	border-bottom:1px solid gray;
+	padding-top:10px;
+	padding-bottom:9px;
+	font-size:16pt;
+	font-family: OpenSans Semibold;
+}
+
+.item{
+	display:flex;
+	width:330px;
+	word-wrap:break-word;
+	text-wrap: unrestricted;
+}
+
+.caunt{
+	display:block;
+	min-width: 26px;
+	height:20px;
+	text-align:center;
+	height:18px;
+	margin-top:5px;
+	margin-left:30px;
+	border-radius:6px;
+	background-color:#27CCC0;
+	font-size:13pt;
+	font-family: OpenSans Bold;
+}
+
+.itemButtomn{
+	display:block;
+	width:95px;
+	height:35px;
+	background-color:white;
+	border:1px solid red;
+	color:red;
+	border-radius:3px;
+}
+.invisible{
+	color:red;
+}

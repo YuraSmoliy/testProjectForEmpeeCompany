@@ -1,0 +1,6 @@
+<div class="comment">
+	<h2 class="title">Comments</h2>
+	<comment *ngFor="let comment of comments" [comment]="comment">
+	</comment>
+	<comment-creator (add)="createComment($event)"></comment-creator>
+</div>

@@ -1,0 +1,32 @@
+.avatar{
+	width:50px;
+	height:50px;
+	background-color:#E6E6E6;
+	margin-right:15px;
+}
+
+.create{
+	display:flex;
+	margin-top:20px;
+} 
+
+.creator{
+	width:335px;
+	height:68px;
+	font-size:12pt;
+	font-family:OpenSans Regular;
+	border-color:#E6E6E6;
+}
+
+.creatorButton{
+	width:130px;
+	height:37px;
+	position:relative; 
+	left:268px;
+	margin-top:5px;
+	border-radius:3px;
+	margin-left:9px;
+	font-size:16pt;
+	background-color:#27CCC0;
+	color :white;
+}
