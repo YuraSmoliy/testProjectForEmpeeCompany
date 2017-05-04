@@ -1,21 +1,23 @@
 .conteiner{
 	display:flex;
+	width:95%;
 	margin-top:20px;
-	border-bottom:1px solid gray;
+	margin-left:26px;
 	padding-top:10px;
-	padding-bottom:9px;
+	padding-bottom:0px;
 	font-size:16pt;
 	font-family: OpenSans Semibold;
+	border-bottom:1px solid #E6E6E6;
 }
 
 .item{
 	display:flex;
-	width:330px;
+	width:79%;
 	word-wrap:break-word;
 	text-wrap: unrestricted;
 }
 
-.caunt{
+.count{
 	display:block;
 	min-width: 26px;
 	height:20px;
@@ -29,15 +31,16 @@
 	font-family: OpenSans Bold;
 }
 
-.itemButtomn{
+.itemButton{
 	display:block;
-	width:95px;
+	width:21%;
 	height:35px;
 	background-color:white;
 	border:1px solid red;
 	color:red;
 	border-radius:3px;
+	margin-bottom:7px;
 }
 .invisible{
-	color:red;
+	border-left:3px solid red;
 }

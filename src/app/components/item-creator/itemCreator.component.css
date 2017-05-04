@@ -1,20 +1,22 @@
 .add{
 	display:flex;
+	margin-left:28px;
+	width:100%;
 }
 
 .creator{
-	width:288px;
-	height:37px;
+	width:68%;
+	height:40px;
 	border-radius:5px;
 	font-size:16pt;
 	font-family:OpenSans;
 }
 
 .creatorButton{
-	width:128px;
-	height:40px;
+	width:25%;
+	height:44px;
 	border-radius:3px;
-	margin-left:9px;
+	margin-left:10px;
 	font-size:16pt;
 	font-family:OpenSans Semibold;
 	background-color:#27CCC0;

@@ -9,26 +9,15 @@ import {Item} from '../../models/item.model';
 })
 export class ItemComponent {
     @Input() item: Item;
-	@Input() selectedId;
+	@Input() isActive = false;
     @Output() select: EventEmitter<any> = new EventEmitter();
     @Output() delete: EventEmitter<any> = new EventEmitter();
-	
-	isActive=this.showActive();
-	
-	showActive(){
-		if(this.item!=undefined&&this.selectedId==this.item.id)
-			return true;
-		else return false;
-	}
-	
+		
 	onDelete(item: Item) {
-			this.delete.emit(item);
-		}
+		this.delete.emit(item);
+	}
 		
     onSelect(item: Item) {
         this.select.emit(item);
-		if(this.selectedId==this.item.id)
-			this.isActive= true;
-		else this.isActive= false;
     }
 }

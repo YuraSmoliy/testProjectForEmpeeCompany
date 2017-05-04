@@ -1,21 +1,24 @@
 import {Item} from '../models/item.model';
 import {Coment} from '../models/coment.model';
 
+let ITEMS_ID = "itemsID";
+
 export class ItemService {
-	lokalData =JSON.parse(localStorage.getItem("object"))||[];
+	localData = JSON.parse(localStorage.getItem(ITEMS_ID))||[];
     items: Item[] = [];
 
     addItem(item: Item) {
         this.items.push(item);
-		this.lokalData.push(String(item.id));
-		localStorage.setItem("object",JSON.stringify(this.lokalData))
-		localStorage.setItem(String(item.id), JSON.stringify(item));
+		this.localData.push(String(item.id));
+		this.updateItemsId();
+		this.updateItem(item);
     }
 
     getItems() {
 		if(this.getData()) {
-			this.items=this.getData();
+			this.items = this.getData();
 		}
+		
 		this.getData();
         return this.items;
     }
@@ -23,24 +26,33 @@ export class ItemService {
     removeItem(item: Item) {
         this.items.splice(this.items.indexOf(item), 1);
 		localStorage.removeItem(String(item.id));
-		this.lokalData.splice(this.lokalData.indexOf(String(item.id)),1);
-		localStorage.setItem("object",JSON.stringify(this.lokalData))
+		this.localData.splice(this.localData.indexOf(String(item.id)), 1);
+		this.updateItemsId();
     }
 
     createItemComment(itemId: number, comment: Coment) {
 		this.items.forEach(item => {
-			if(item.id===itemId){
+			if(item.id === itemId){
 				item.coments.push(comment);		
-				localStorage.setItem(String(itemId), JSON.stringify(item));
+				this.updateItem(item);
 			}
 		})        
     }
 	
 	getData(){
-		let getLocaleData: Item[] = [];
-		for(let i=0;i<this.lokalData.length;i++){	
-			getLocaleData.push(JSON.parse(localStorage.getItem(this.lokalData[i])));
-		};	
-		return getLocaleData;
+		let getLocalData: Item[] = [];
+		for (let i = 0; i < this.localData.length; i++) {	
+			getLocalData.push(JSON.parse(localStorage.getItem(this.localData[i])));
+		};
+		
+		return getLocalData;
+	}
+	
+	updateItemsId(){
+		localStorage.setItem(ITEMS_ID,JSON.stringify(this.localData));
+	}
+	
+	updateItem(item){
+		localStorage.setItem(String(item.id), JSON.stringify(item));
 	}
 }

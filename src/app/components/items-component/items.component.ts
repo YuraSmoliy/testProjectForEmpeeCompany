@@ -20,9 +20,9 @@ export class ItemsComponent {
     }
 
     onItemDelete(item) {
-        
         this.delete.emit(item);
     }
+	
 	onCreateItem(item){
 		this.create.emit(item);
 	}
